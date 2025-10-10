@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Shooter Game - Admin Panel</title>
+    <link rel="stylesheet" href="Assets/css/style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>Space Shooter Game</h1>
+            <div class="score-display">
+                <span>Score: <span id="score">0</span></span>
+                <span>Lives: <span id="lives">3</span></span>
+            </div>
+            <button id="admin-toggle" class="admin-toggle">Admin Panel</button>
+        </div>
+        
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        
+        <div class="game-controls">
+            <p>Use WASD or Arrow Keys to move, SPACE to shoot</p>
+            <button id="start-btn">Start Game</button>
+            <button id="pause-btn">Pause</button>
+        </div>
+    </div>
+
+    <!-- Admin Panel Modal -->
+    <div id="admin-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Admin Panel</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="password-section">
+                    <label for="admin-password">Enter Admin Password:</label>
+                    <input type="password" id="admin-password" placeholder="Enter password">
+                    <button id="login-btn">Login</button>
+                </div>
+                
+                <div id="admin-controls" class="admin-controls" style="display: none;">
+                    <h3>Game Controls</h3>
+                    
+                    <div class="control-group">
+                        <label for="player-speed">Player Speed:</label>
+                        <input type="range" id="player-speed" min="1" max="10" value="5">
+                        <span id="speed-value">5</span>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="score-adjust">Add Score:</label>
+                        <input type="number" id="score-adjust" min="0" max="10000" value="100">
+                        <button id="add-score-btn">Add Score</button>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="lives-adjust">Set Lives:</label>
+                        <input type="number" id="lives-adjust" min="0" max="10" value="3">
+                        <button id="set-lives-btn">Set Lives</button>
+                    </div>
+                    
+                    <div class="control-group">
+                        <button id="reset-game-btn">Reset Game</button>
+                        <button id="god-mode-btn">Toggle God Mode</button>
+                    </div>
+                    
+                    <div class="control-group">
+                        <button id="spawn-enemy-btn">Spawn Enemy</button>
+                        <button id="clear-enemies-btn">Clear All Enemies</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="Assets/js/script.js"></script>
+</body>
+</html
