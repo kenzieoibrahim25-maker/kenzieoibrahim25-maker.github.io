@@ -13,6 +13,11 @@
             <div class="score-display">
                 <span>Score: <span id="score">0</span></span>
                 <span>Lives: <span id="lives">3</span></span>
+                <span>Level: <span id="level">1</span></span>
+                <span>Points: <span id="level-points">0</span></span>
+                <span>Timer: <span id="level-timer">0.0</span>s</span>
+                <span>Place: <span id="place">1</span></span>
+                <span>Map: <span id="map">1</span></span>
             </div>
             <button id="admin-toggle" class="admin-toggle">Admin Panel</button>
         </div>
@@ -69,6 +74,59 @@
                     <div class="control-group">
                         <button id="spawn-enemy-btn">Spawn Enemy</button>
                         <button id="clear-enemies-btn">Clear All Enemies</button>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="level-adjust">Set Level:</label>
+                        <input type="number" id="level-adjust" min="1" max="4" value="1">
+                        <button id="set-level-btn">Set Level</button>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="level-points-adjust">Add Level Points:</label>
+                        <input type="number" id="level-points-adjust" min="0" max="1000" value="50">
+                        <button id="add-level-points-btn">Add Points</button>
+                    </div>
+                    
+                    <div class="control-group">
+                        <button id="change-map-btn">Change Map</button>
+                        <button id="reset-level-btn">Reset Level System</button>
+                    </div>
+                    
+                    <div class="control-group">
+                        <h4>Cheat Options</h4>
+                        <button id="max-score-btn">Max Score (99999)</button>
+                        <button id="max-lives-btn">Max Lives (10)</button>
+                        <button id="max-level-btn">Max Level (4)</button>
+                    </div>
+                    
+                    <div class="control-group">
+                        <button id="rapid-fire-btn">Toggle Rapid Fire</button>
+                        <button id="big-bullets-btn">Toggle Big Bullets</button>
+                        <button id="slow-motion-btn">Toggle Slow Motion</button>
+                    </div>
+                    
+                    <div class="control-group">
+                        <button id="invincible-btn">Toggle Invincible</button>
+                        <button id="no-enemies-btn">Toggle No Enemies</button>
+                        <button id="auto-shoot-btn">Toggle Auto Shoot</button>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="enemy-speed">Enemy Speed:</label>
+                        <input type="range" id="enemy-speed" min="0.5" max="5" value="2" step="0.1">
+                        <span id="enemy-speed-value">2.0</span>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="bullet-speed">Bullet Speed:</label>
+                        <input type="range" id="bullet-speed" min="3" max="15" value="7" step="0.5">
+                        <span id="bullet-speed-value">7.0</span>
+                    </div>
+                    
+                    <div class="control-group">
+                        <button id="spawn-boss-btn">Spawn Boss Enemy</button>
+                        <button id="rainbow-mode-btn">Toggle Rainbow Mode</button>
                     </div>
                 </div>
             </div>
